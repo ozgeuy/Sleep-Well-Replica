@@ -8,6 +8,12 @@ public class IKPlacements : MonoBehaviour
     [SerializeField] private Transform rightFootIKTransform;
     [SerializeField] private Transform leftHandIKTransform;
     [SerializeField] private Transform rightHandIKTransform;
+    [SerializeField] private Transform rightElbowIKTransform;
+    [SerializeField] private Transform leftElbowIKTransform;
+    [SerializeField] private Transform leftKneeIKTransform;
+    [SerializeField] private Transform rightKneeIKTransform;
+    [SerializeField] private Transform bodyIKTransform;
+    [SerializeField] private Transform headIKTransform;
 
     private Animator animator;
 
@@ -71,6 +77,41 @@ public class IKPlacements : MonoBehaviour
             animator.SetIKRotationWeight(AvatarIKGoal.RightHand, 1f);
 
             animator.SetIKPosition(AvatarIKGoal.RightHand, rightHandIKTransform.position);
+            #endregion
+
+            #region Right Elbow
+            animator.SetIKHintPositionWeight(AvatarIKHint.RightElbow, 1f);
+
+            animator.SetIKHintPosition(AvatarIKHint.RightElbow, rightElbowIKTransform.position);
+            #endregion
+
+            #region Left Elbow
+            animator.SetIKHintPositionWeight(AvatarIKHint.LeftElbow, 1f);
+
+            animator.SetIKHintPosition(AvatarIKHint.LeftElbow, leftElbowIKTransform.position);
+            #endregion
+
+            #region Left Knee
+            animator.SetIKHintPositionWeight(AvatarIKHint.LeftKnee, 1f);
+
+            animator.SetIKHintPosition(AvatarIKHint.LeftKnee, leftKneeIKTransform.position);
+            #endregion
+
+            #region Right Knee
+            animator.SetIKHintPositionWeight(AvatarIKHint.RightKnee, 1f);
+
+            animator.SetIKHintPosition(AvatarIKHint.RightKnee, rightKneeIKTransform.position);
+            #endregion
+
+            #region Head
+            animator.SetLookAtWeight(1f);
+
+            animator.SetLookAtPosition(headIKTransform.position);
+            #endregion
+
+            #region Body
+
+            animator.bodyPosition = bodyIKTransform.position;
             #endregion
         }
     }
