@@ -24,6 +24,7 @@ public class IKTargetController : MonoBehaviour
 
     private void OnMouseDrag()
     {
+       
         transform.position = GetMouseWorldPos() + mOffset;
     }
     private void OnMouseDown()

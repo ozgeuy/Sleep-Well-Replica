@@ -56,6 +56,7 @@ public class IKPlacements : MonoBehaviour
             animator.SetIKRotationWeight(AvatarIKGoal.LeftFoot, 1f);
 
             animator.SetIKPosition(AvatarIKGoal.LeftFoot, leftFootIKTransform.position);
+          
             #endregion
 
             #region Right foot
