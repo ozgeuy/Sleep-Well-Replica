@@ -33,8 +33,7 @@ public class IKPlacements : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("transform pos SOL BACAK" + leftFoot.transform.position);
-        Debug.Log("transform pos SAĞ BACAK" + rightFoot.transform.position);
+     
     }
 
     public void OnAnimatorIK()
