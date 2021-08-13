@@ -15,7 +15,12 @@ public class IKPlacements : MonoBehaviour
     [SerializeField] private Transform bodyIKTransform;
     [SerializeField] private Transform headIKTransform;
 
+    [SerializeField] private GameObject leftFoot;
+    [SerializeField] private GameObject rightFoot;
+
+
     private Animator animator;
+
 
 
 
@@ -28,23 +33,8 @@ public class IKPlacements : MonoBehaviour
 
     private void Update()
     {
-        //#region ray'in carptigi cismin pozisyonunu mouse'a bagli degistiriyor
-        //var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //RaycastHit hit;
-
-        //if (Physics.Raycast(ray, out hit))
-        //{
-            
-        //    if (hit.transform.tag == "IKTransform")
-        //    {
-
-
-        //        hit.transform.position = hit.point;
-                
-        //    }
-
-        //}
-        //#endregion
+        Debug.Log("transform pos SOL BACAK" + leftFoot.transform.position);
+        Debug.Log("transform pos SAĞ BACAK" + rightFoot.transform.position);
     }
 
     public void OnAnimatorIK()
