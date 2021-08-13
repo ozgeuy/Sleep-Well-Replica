@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - IKTransform
+  - LeftFoot
+  - RightFoot
+  - RightHand
+  - LeftHand
+  - Head
   layers:
   - Default
   - TransparentFX

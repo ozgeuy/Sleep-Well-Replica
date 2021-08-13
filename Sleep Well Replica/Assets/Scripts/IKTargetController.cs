@@ -7,9 +7,10 @@ public class IKTargetController : MonoBehaviour
 {
     [SerializeField] private GameObject leftFoot;
     [SerializeField] private GameObject rightFoot;
-
-    [SerializeField] private Transform bodyIKTransform;
-
+    [SerializeField]
+    private GameObject[] bodyParts;
+   [SerializeField] private Transform bodyIKTransform;
+   
 
 
     private Vector3 mOffset;
@@ -31,37 +32,16 @@ public class IKTargetController : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (Mathf.Abs(gameObject.transform.position.x - leftFoot.transform.position.x) <= 0.1f &&
-            Mathf.Abs(gameObject.transform.position.y - leftFoot.transform.position.y) <= 0.1f)
+        for(int i =0; i < bodyParts.Length; i++)
         {
-            Debug.Log("if calisiyor!");
-            transform.position = GetMouseWorldPos() + mOffset;
-
+            if(gameObject.tag == bodyParts[i].tag)
+            {
+                SetIKTransformPosition(bodyParts[i], 0.1f);
+            }
         }
-        else
-        {
-            Debug.Log("ELSE calisiyor!");
-
-            bodyIKTransform.position += new Vector3((gameObject.transform.position.x - leftFoot.transform.position.x) - 0.1f,
-                (gameObject.transform.position.y - leftFoot.transform.position.y) - 0.1f, 0);
-
-        }
-
-        if (Mathf.Abs(gameObject.transform.position.x - rightFoot.transform.position.x) <= 0.1f &&
-            Mathf.Abs(gameObject.transform.position.y - rightFoot.transform.position.y) <= 0.1f)
-        {
-            Debug.Log("if calisiyor!");
-            transform.position = GetMouseWorldPos() + mOffset;
-
-        }
-        else
-        {
-            Debug.Log("ELSE calisiyor!");
-
-            bodyIKTransform.position += new Vector3((gameObject.transform.position.x - rightFoot.transform.position.x) - 0.1f,
-                (gameObject.transform.position.y - rightFoot.transform.position.y) - 0.1f, 0);
-
-        }
+       
+        
+     
     }
     private void OnMouseDown()
     {
@@ -74,5 +54,24 @@ public class IKTargetController : MonoBehaviour
         Vector3 mousePoint = Input.mousePosition;
         mousePoint.z = mZCoord;
         return Camera.main.ScreenToWorldPoint(mousePoint);
+    }
+
+    private void SetIKTransformPosition(GameObject bodyPart, float maxDistance)
+    {
+        if (Mathf.Abs(gameObject.transform.position.x - bodyPart.transform.position.x) <= maxDistance &&
+        Mathf.Abs(gameObject.transform.position.y - bodyPart.transform.position.y) <= maxDistance)
+        {
+            Debug.Log("if calisiyor!");
+            transform.position = GetMouseWorldPos() + mOffset;
+
+        }
+        else
+        {
+            Debug.Log("ELSE calisiyor!");
+
+            bodyIKTransform.position += new Vector3((gameObject.transform.position.x - bodyPart.transform.position.x) - maxDistance,
+                (gameObject.transform.position.y - bodyPart.transform.position.y) - maxDistance, 0);
+
+        }
     }
 }
