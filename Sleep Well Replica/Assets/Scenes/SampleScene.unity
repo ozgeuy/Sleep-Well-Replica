@@ -681,6 +681,7 @@ MonoBehaviour:
   - {fileID: 589434723}
   - {fileID: 589434727}
   - {fileID: 589434726}
+  alarmClocksAnimator: {fileID: 1644210492}
   bodyIKTransform: {fileID: 1577822715}
 --- !u!1 &517585704
 GameObject:
@@ -797,6 +798,7 @@ MonoBehaviour:
   - {fileID: 589434723}
   - {fileID: 589434727}
   - {fileID: 589434726}
+  alarmClocksAnimator: {fileID: 1644210492}
   bodyIKTransform: {fileID: 1577822715}
 --- !u!54 &517585710
 Rigidbody:
@@ -1151,6 +1153,7 @@ MonoBehaviour:
   - {fileID: 589434723}
   - {fileID: 589434727}
   - {fileID: 589434726}
+  alarmClocksAnimator: {fileID: 1644210492}
   bodyIKTransform: {fileID: 1577822715}
 --- !u!135 &634756717
 SphereCollider:
@@ -1544,6 +1547,7 @@ MonoBehaviour:
   - {fileID: 589434723}
   - {fileID: 589434727}
   - {fileID: 589434726}
+  alarmClocksAnimator: {fileID: 1644210492}
   bodyIKTransform: {fileID: 1577822715}
 --- !u!135 &777391229
 SphereCollider:
@@ -1901,6 +1905,7 @@ MonoBehaviour:
   - {fileID: 589434723}
   - {fileID: 589434727}
   - {fileID: 589434726}
+  alarmClocksAnimator: {fileID: 1644210492}
   bodyIKTransform: {fileID: 1577822715}
 --- !u!1 &1192895437
 GameObject:
@@ -1942,6 +1947,7 @@ MonoBehaviour:
   - {fileID: 589434723}
   - {fileID: 589434727}
   - {fileID: 589434726}
+  alarmClocksAnimator: {fileID: 1644210492}
   bodyIKTransform: {fileID: 1577822715}
 --- !u!135 &1192895439
 SphereCollider:
@@ -2057,6 +2063,7 @@ MonoBehaviour:
   - {fileID: 589434723}
   - {fileID: 589434727}
   - {fileID: 589434726}
+  alarmClocksAnimator: {fileID: 1644210492}
   bodyIKTransform: {fileID: 1577822715}
 --- !u!135 &1235377559
 SphereCollider:
@@ -2453,6 +2460,7 @@ MonoBehaviour:
   - {fileID: 589434723}
   - {fileID: 589434727}
   - {fileID: 589434726}
+  alarmClocksAnimator: {fileID: 1644210492}
   bodyIKTransform: {fileID: 1577822715}
 --- !u!135 &1577822712
 SphereCollider:
@@ -2528,6 +2536,12 @@ Transform:
   m_Father: {fileID: 283430339}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1644210492 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 334694427281308175, guid: de1bda247ebebcd4d91df6ac30b510f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 7589953630172605129}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1734340236
 GameObject:
   m_ObjectHideFlags: 0
@@ -2741,6 +2755,7 @@ MonoBehaviour:
   - {fileID: 589434723}
   - {fileID: 589434727}
   - {fileID: 589434726}
+  alarmClocksAnimator: {fileID: 1644210492}
   bodyIKTransform: {fileID: 1577822715}
 --- !u!1 &2005570247
 GameObject:
@@ -2782,6 +2797,7 @@ MonoBehaviour:
   - {fileID: 589434723}
   - {fileID: 589434727}
   - {fileID: 589434726}
+  alarmClocksAnimator: {fileID: 1644210492}
   bodyIKTransform: {fileID: 1577822715}
 --- !u!135 &2005570249
 SphereCollider:

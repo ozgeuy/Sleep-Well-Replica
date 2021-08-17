@@ -9,7 +9,9 @@ public class IKTargetController : MonoBehaviour
     [SerializeField] private GameObject rightFoot;
     [SerializeField] private GameObject[] bodyParts;
 
-    [SerializeField] private Transform bodyIKTransform;
+    [SerializeField] private Animator alarmClocksAnimator;
+
+   [SerializeField] private Transform bodyIKTransform;
    
     private Vector3 offset;
 
@@ -46,6 +48,7 @@ public class IKTargetController : MonoBehaviour
         if(other.tag == "Clock")
         {
             Debug.Log("turned off");
+            alarmClocksAnimator.enabled = false;
         }
     }
 
