@@ -45,7 +45,7 @@ public class IKTargetController : MonoBehaviour
     {
         if(other.tag == "Clock")
         {
-            
+            Debug.Log("turned off");
         }
     }
 
