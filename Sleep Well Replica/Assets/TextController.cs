@@ -27,7 +27,7 @@ public class TextController : MonoBehaviour
 
     }
 
-    public void ResetTexts()
+    public void SetTexts()
     {
         Iterator = (LevelManager.Instance.Level - 1);
         levelText.text = "LEVEL " + LevelManager.Instance.Level;

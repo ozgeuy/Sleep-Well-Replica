@@ -12,6 +12,8 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] private GameObject[] levels;
 
+    private GameObject currentLevel;
+
 
 
 
@@ -19,7 +21,8 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instance = this; 
+        Instance = this;
+       currentLevel = Instantiate(levels[Level - 1]);
        
     }
 
@@ -27,5 +30,15 @@ public class LevelManager : MonoBehaviour
     void Update()
     {
        
+    }
+
+    public void SetLevel()
+    {
+        
+        currentLevel.SetActive(false);
+        Level++;
+        TextController.SetTexts(); //LEVEL NUMBER AND MISSION TEXTS
+        //levels[Level - 1].SetActive(true);
+        GameObject newLevel = Instantiate(levels[Level - 1]);
     }
 }
