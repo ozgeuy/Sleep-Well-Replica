@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1031,7 +1031,7 @@ GameObject:
   - component: {fileID: 606532222}
   - component: {fileID: 606532221}
   m_Layer: 5
-  m_Name: Level Mission
+  m_Name: Level Mission Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1546,6 +1546,7 @@ RectTransform:
   m_Children:
   - {fileID: 1439401136}
   - {fileID: 1149266392}
+  - {fileID: 761440446}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1554,6 +1555,60 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &761440445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 761440446}
+  - component: {fileID: 761440447}
+  m_Layer: 5
+  m_Name: Text Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &761440446
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761440445}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 721515164}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &761440447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761440445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728e67a08e1b10447a7e4c90796394c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelText: {fileID: 1546305159}
+  missionText: {fileID: 606532221}
+  levelMissions:
+  - I NEED TO SLEEP
+  - I'M LATE FOR WORK
+  - SLEEPING ON RAILS IS TOO DANGEROUS
 --- !u!1 &767897232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1792,6 +1847,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2bf53b23b451741afdedf39a44b92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Level: 1
+  TextController: {fileID: 761440447}
   levels:
   - {fileID: 859050745134072694, guid: 90f247152f7512b49bbbeeb9aa72b245, type: 3}
   - {fileID: 3806777358447968612, guid: 7d4de39e70cd7134bb81b200594c1ce6, type: 3}
@@ -2059,7 +2116,7 @@ GameObject:
   - component: {fileID: 1149266394}
   - component: {fileID: 1149266393}
   m_Layer: 5
-  m_Name: Image2
+  m_Name: Mission Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2460,7 +2517,7 @@ GameObject:
   - component: {fileID: 1439401138}
   - component: {fileID: 1439401137}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Level Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2722,7 +2779,7 @@ GameObject:
   - component: {fileID: 1546305160}
   - component: {fileID: 1546305159}
   m_Layer: 5
-  m_Name: Level Number
+  m_Name: Level Number Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2766,7 +2823,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'LEVEL '
+  m_text: LEVEL 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b06d9258b5a2726439644e1bfdb8c152, type: 2}
   m_sharedMaterial: {fileID: -4920707111697224542, guid: b06d9258b5a2726439644e1bfdb8c152,
